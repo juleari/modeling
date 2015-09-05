@@ -1,0 +1,16 @@
+
+*.doc
+
+*.pdf
+
+*.docx
+
+*.jpg
+
+*.odt
+
+*.png
+
+lab4/rk.pyc
+
+*.pyc

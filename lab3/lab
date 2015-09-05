@@ -1,0 +1,17 @@
+Chans       STORAGE 3                   ; 3 канала
+Delay       EQU     0.5                 ; средняя задержка 0.5с
+QueueLen    EQU     5                   ; 5 мест в буфере
+
+        GENERATE    (Exponential(1,0,Delay))
+        QUEUE       buf                 ; войти в очередь
+        TEST L  q$buf,QueueLen,Mt1      ; если есть место
+        ENTER       Chans,1             ; занять канал
+        DEPART  buf                     ; покинуть очередь
+        ADVANCE 1.5,0.5             	; задержка 1-2 секунды
+        LEAVE       Chans,1             ; покинуть канал
+        TERMINATE   1                   ; обслуженные транзакты
+
+Mt1     DEPART      buf                 ; покинуть очередь
+        TERMINATE   1                   ; потерянные транзакты
+
+        START       1000                ; 1000 транзактов
