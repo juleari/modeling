@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="utf8">
+    <style>
+        .graph {
+            width: 100%;
+            height: 260pt;
+            margin-top: 20pt;
+            font-size: 10pt;
+        }
+        .graph__ylabel {
+            width: 7%;
+            float: left;
+        }
+        .graph__ylabel div {
+            width: 150pt !important;
+            position: relative;
+            top: 85pt;
+            left: -60pt;
+            text-align: center;
+            transform: rotate(-90deg);
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+        }
+        .graph__graphic {
+            width: 90%;
+            float: left;
+            max-width: 350pt;
+        }
+        .graph__graphic__label {
+            margin: 0 auto;
+            display: table;
+            border: 1px solid;
+        }
+        .graph__graphic__label tr {
+            display: inline-block;
+        }
+        .graph__graphic__plot {
+            height: 150pt;
+            max-width: 350pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="graph">
+        
+        <div class="graph__ylabel"><div>Потерянные пакеты (%)</div></div>
+        <div class="graph__graphic">
+            <div id="chart" class="graph__graphic__plot" style="padding: 0px; position: relative;"><canvas class="flot-base" width="467" height="200" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 467px; height: 200px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 77px; top: 186px; left: 22px; text-align: center;">0,0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 77px; top: 186px; left: 103px; text-align: center;">20,0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 77px; top: 186px; left: 188px; text-align: center;">40,0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 77px; top: 186px; left: 272px; text-align: center;">60,0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 77px; top: 186px; left: 357px; text-align: center;">80,0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 77px; top: 186px; left: 439px; text-align: center;">100,0</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 175px; left: 2px; text-align: right;">10,0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 153px; left: 2px; text-align: right;">15,0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 132px; left: 2px; text-align: right;">20,0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 110px; left: 2px; text-align: right;">25,0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 89px; left: 2px; text-align: right;">30,0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 67px; left: 2px; text-align: right;">35,0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 45px; left: 2px; text-align: right;">40,0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 24px; left: 2px; text-align: right;">45,0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 2px; left: 2px; text-align: right;">50,0</div></div></div><canvas class="flot-overlay" width="467" height="200" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 467px; height: 200px;"></canvas></div>
+        </div>
+        <div class="graph__xlabel"><div>Время обработки одного пакета (с)</div></div>
+    </div>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="plot.js"></script>
+    <script type="text/javascript" src="graph.js"></script>
+</body>
+</html>
